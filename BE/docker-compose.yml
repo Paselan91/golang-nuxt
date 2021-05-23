@@ -1,0 +1,35 @@
+# version: '3.7'
+
+# services:
+#   bitflyer:
+#     build:
+#       context: ./
+#       dockerfile: ./docker/app/Dockerfile
+#     container_name: "bitflyer"
+#     depends_on:
+#       - mysql
+#     environment:
+#       - ENV_MODE=dev
+#       - MYSQL_CONTAINER_NAME=bitflyer_mysql
+#     ports:
+#       - $PORT:8000
+#     volumes:
+#       - .:/app:cached
+#     links:
+#       - mysql
+#     command: realize start --run
+#     tty: true
+#   mysql:
+#     container_name: "bitflyer_mysql"
+#     image: mysql:8.0
+#     command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+#     volumes:
+#       - ./docker/db/data:/var/lib/mysql
+#       - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+#     ports:
+#       - $MYSQL_PORT:3306
+#     environment:
+#       MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+#       MYSQL_USER: $MYSQL_USER
+#       MYSQL_PASSWORD: $MYSQL_PASSWORD
+#       MYSQL_DATABASE: $MYSQL_DATABASE

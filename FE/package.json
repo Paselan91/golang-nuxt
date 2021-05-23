@@ -1,0 +1,42 @@
+{
+  "name": "nuxt-app",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "description": "",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "lint:js": "eslint --ext .js,.vue,.ts --ignore-path .gitignore --ignore-path .eslintignore --fix",
+    "lint": "yarn lint:js",
+    "lint:fix": "yarn lint:js --fix"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^2.1.0",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "node-sass": "4.14",
+    "nuxt": "^2.0.0",
+    "nuxt-property-decorator": "^2.9.1",
+    "nuxt-ts": "^2.8.1",
+    "sass-loader": "7.1.0",
+    "vue-meta": "^2.4.0"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^0.3.4",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/eslint-config-typescript": "^5.0.0",
+    "@nuxtjs/eslint-module": "^3.0.1",
+    "@nuxtjs/vuetify": "^1.11.3",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-prettier": "^3.4.0"
+  }
+}

@@ -1,0 +1,33 @@
+{{define "chart"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chart</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function send () {
+            var params = {
+                "product_code": "BTC_USD",
+                "limit": 10,
+                "duration": "1s"
+            }
+            $.get("/api/v1/candle", params).done(function (data) {
+                var candles = data[0]
+                $('#dashboard_div').append(candles.open + "<br>")
+            })
+        }
+        setInterval(send, 1000 * 3)
+        window.onload = function () {
+           send()
+        }
+    </script>
+</head>
+<body>
+<div id="dashboard_div">
+
+</div>
+
+</body>
+</html>
+{{end}}
